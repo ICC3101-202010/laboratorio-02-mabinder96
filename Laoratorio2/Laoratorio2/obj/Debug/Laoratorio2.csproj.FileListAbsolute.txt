@@ -1,0 +1,7 @@
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\bin\Debug\Laoratorio2.exe.config
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\bin\Debug\Laoratorio2.exe
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\bin\Debug\Laoratorio2.pdb
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\obj\Debug\Laoratorio2.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\obj\Debug\Laoratorio2.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\obj\Debug\Laoratorio2.exe
+C:\Users\usuario\Documents\Ingeniería civil\Quinto semestre\Programación orientada a objetos\Laboratorios\Laboratorio 2\laboratorio-02-mabinder96\Laoratorio2\Laoratorio2\obj\Debug\Laoratorio2.pdb
