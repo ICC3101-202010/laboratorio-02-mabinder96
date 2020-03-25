@@ -7,7 +7,8 @@ namespace Laoratorio2
         static void Main(string[] args)
         {
             Espotifai firstprueba = new Espotifai();  //Creo un constructor para correr el programa
-            Cancion song1 = new Cancion("Sirenas", "Dr. Chacra", "Taburete", "Pop");
+            //Agrego canciones de forma manual a la lista (1.1)
+            Cancion song1 = new Cancion("Sirenas", "Dr. Chacra", "Taburete", "Pop"); 
             firstprueba.AgregarCancion(song1);
             Cancion song2 = new Cancion("El fin", "Dr. Chacra", "Taburete", "Pop");
             firstprueba.AgregarCancion(song2);
@@ -17,21 +18,26 @@ namespace Laoratorio2
             firstprueba.AgregarCancion(song4);
             Cancion song5 = new Cancion("Tusa", "Tusa", "Karol G", "Reggaeton");
             firstprueba.AgregarCancion(song5);
-            Console.WriteLine("Bienvenido a Espotifay "); 
-            bool encender = true; 
-            do  //Creo un ciclo do while para que el programa se repita hasta que la persona salga
+
+            Console.WriteLine("¡Bienvenido a Espotifay! \n "); //Doy la bienvenida al programa
+            //Utilizo un ciclo so while, para que cuando el usuario no quiera seguir agregando canciones y usando el programa, pueda salir
+            bool encender = true;
+            do
             {
+                //Imprimo las opciones y espero la respuesta del usuario
                 Console.WriteLine("Seleccione su opción: ");
                 Console.WriteLine("Opción 1: Ver todas las canciones");
                 Console.WriteLine("Opción 2: Agregar canción");
                 Console.WriteLine("Opción 3: Salir del programa");
                 string elección = Console.ReadLine();
-                if ((Convert.ToInt32(elección) == 1))
+
+                //Corro el programa según la selección del usuario
+                if (elección == "1") 
                 {
-                    firstprueba.VerCanciones();
+                    firstprueba.VerCanciones(); //Llamo al método VerCanciones()
                     Console.ReadKey();
                 }
-                else if ((Convert.ToInt32(elección) == 2))
+                else if (elección == "2")
                 {
                     Console.WriteLine("Ingrese nombre de la canción: ");
                     string nombre = Console.ReadLine();
@@ -41,11 +47,12 @@ namespace Laoratorio2
                     string artista = Console.ReadLine();
                     Console.WriteLine("Ingrese el género de la canción: ");
                     string género = Console.ReadLine();
-                    Cancion newsong = new Cancion(nombre, álbum, artista, género);
-                    if (firstprueba.AgregarCancion(newsong) == true)
+                    Cancion newsong = new Cancion(nombre, álbum, artista, género);//Agrego la canción en el caso de que no exista
+                    if (firstprueba.AgregarCancion(newsong) == true) 
                     {
                         Console.WriteLine("Se ha agregado correctamente la canción");
                     }
+
                     else if (firstprueba.AgregarCancion(newsong) == false)
                     {
                         Console.WriteLine("La canción ya existe.");
@@ -53,15 +60,22 @@ namespace Laoratorio2
                     Console.ReadKey();
                 }
 
-                else if ((Convert.ToInt32(elección) == 3))
+                else if (elección == "3")
                 {
+                    encender = false; //Como esta opción es salir, cambio encender a false para que deje de correr el programa
+                }
+
+                else //Creo una opción en el caso que elija otra cosa
+                {
+                    Console.WriteLine("Esa opción no existe.");
+                    Console.ReadKey();
                     encender = false;
                 }
-                
-                Console.Clear();
+               
+                Console.Clear(); //Limpio mi pantalla por orden
             }
             while (encender);
-
+           
         }
     }
 }

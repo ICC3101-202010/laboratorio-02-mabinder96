@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Laoratorio2
 {
-    class Cancion
+    class Cancion //Creo la clase Cancion 
     {
-        private string nombre;
-        private string álbum;
-        private string artista;
-        private string género;
+        private string nombre; //Atributo nombre
+        private string álbum; //Atributo álbum
+        private string artista; //Atributo artista
+        private string género; //Atributo género
 
-        public Cancion(string nombre, string álbum, string artista, string género)
+        public Cancion(string nombre, string álbum, string artista, string género) //Creo el constructr de Cancion
         {
             this.nombre = nombre;
             this.álbum = álbum;
@@ -21,9 +21,9 @@ namespace Laoratorio2
             this.género = género;
         }
 
-        public string Informacion()
+        public string Informacion() //Creo el método Informacion()
         {
-            return "género: " + género + ", artista: " + artista + ", álbum: " + álbum + ", nombre: " + nombre;
+            return "género: " + género + ", artista: " + artista + ", álbum: " + álbum + ", nombre: " + nombre; //me devuelve los atributos de la clase Cancion
         }
 
     }
