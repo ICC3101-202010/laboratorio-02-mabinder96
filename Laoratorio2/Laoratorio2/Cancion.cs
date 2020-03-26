@@ -44,7 +44,7 @@ namespace Laoratorio2
 
         public string Informacion() //Creo el método Informacion()
         {
-            return "género: " + Género + ", artista: " + Artista + ", álbum: " + Álbum + ", nombre: " + Nombre; //me devuelve los atributos de la clase Cancion
+            return "género: " + Género + ", artista: " + Artista + ", álbum: " + Álbum + ", nombre: " + Nombre; 
         }
 
     }
