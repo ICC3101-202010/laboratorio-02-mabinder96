@@ -15,15 +15,36 @@ namespace Laoratorio2
 
         public Cancion(string nombre, string álbum, string artista, string género) //Creo el constructr de Cancion
         {
-            this.nombre = nombre;
-            this.álbum = álbum;
-            this.artista = artista;
-            this.género = género;
+            this.Nombre = nombre;
+            this.Álbum = álbum;
+            this.Artista = artista;
+            this.Género = género;
+        }
+
+        public string Nombre 
+        {
+            get => nombre; 
+            set => nombre = value; 
+        }
+        public string Álbum 
+        {
+            get => álbum; 
+            set => álbum = value; 
+        }
+        public string Artista 
+        {
+            get => artista; 
+            set => artista = value; 
+        }
+        public string Género 
+        {
+            get => género; 
+            set => género = value; 
         }
 
         public string Informacion() //Creo el método Informacion()
         {
-            return "género: " + género + ", artista: " + artista + ", álbum: " + álbum + ", nombre: " + nombre; //me devuelve los atributos de la clase Cancion
+            return "género: " + Género + ", artista: " + Artista + ", álbum: " + Álbum + ", nombre: " + Nombre; //me devuelve los atributos de la clase Cancion
         }
 
     }

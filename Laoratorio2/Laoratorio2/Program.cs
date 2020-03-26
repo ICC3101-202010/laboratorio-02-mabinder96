@@ -28,7 +28,8 @@ namespace Laoratorio2
                 Console.WriteLine("Seleccione su opción: ");
                 Console.WriteLine("Opción 1: Ver todas las canciones");
                 Console.WriteLine("Opción 2: Agregar canción");
-                Console.WriteLine("Opción 3: Salir del programa");
+                Console.WriteLine("Opción 3: Ver canciones por criterio");
+                Console.WriteLine("Opción 4: Salir del programa");
                 string elección = Console.ReadLine();
 
                 //Corro el programa según la selección del usuario
@@ -39,15 +40,15 @@ namespace Laoratorio2
                 }
                 else if (elección == "2")
                 {
-                    Console.WriteLine("Ingrese nombre de la canción: ");
-                    string nombre = Console.ReadLine();
+                    Console.WriteLine("Ingrese nombre de la canción: "); 
+                    string Nombre = Console.ReadLine();
                     Console.WriteLine("Ingrese el álbum de la canción: ");
-                    string álbum = Console.ReadLine();
+                    string Álbum = Console.ReadLine();
                     Console.WriteLine("Ingrese el artista de la canción: ");
-                    string artista = Console.ReadLine();
+                    string Artista = Console.ReadLine();
                     Console.WriteLine("Ingrese el género de la canción: ");
-                    string género = Console.ReadLine();
-                    Cancion newsong = new Cancion(nombre, álbum, artista, género);//Agrego la canción en el caso de que no exista
+                    string Género = Console.ReadLine();
+                    Cancion newsong = new Cancion(Nombre, Álbum, Artista, Género);//Agrego la canción en el caso de que no exista
                     if (firstprueba.AgregarCancion(newsong) == true) 
                     {
                         Console.WriteLine("Se ha agregado correctamente la canción");
@@ -60,9 +61,29 @@ namespace Laoratorio2
                     Console.ReadKey();
                 }
 
-                else if (elección == "3")
+                else if (elección == "4")
                 {
                     encender = false; //Como esta opción es salir, cambio encender a false para que deje de correr el programa
+                }
+
+               else if (elección == "3") //Llamo al método ver canciones por criterio (le pregunto antes al usurario el criterio y el valor)
+                {
+                    Console.WriteLine("Ingrese su criterio: ");
+                    string criterio = Console.ReadLine();
+                    Console.WriteLine("Ingrese el valor del criterio: ");
+                    string valor = Console.ReadLine();
+                    if (firstprueba.CancionesPorCriterio(criterio, valor).Count == 0)
+                    {
+                        Console.WriteLine("No se han encontrado canciones que cumplan con el valor solicitado");
+                    }
+                    else
+                    {
+                        foreach (Cancion a in firstprueba.CancionesPorCriterio(criterio, valor))
+                        {
+                            Console.WriteLine(a.Informacion());
+                        }
+                    }
+                    Console.ReadKey();
                 }
 
                 else //Creo una opción en el caso que elija otra cosa
