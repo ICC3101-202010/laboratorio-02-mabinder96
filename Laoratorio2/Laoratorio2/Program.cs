@@ -164,7 +164,7 @@ namespace Laoratorio2
                 //Si el usuario selecciona la opción 5, entrego la información de las Playlist
                 else if (elección == "5")
                 {
-                    firstprueba.VerMisPlaylists();
+                    Console.WriteLine(firstprueba.VerMisPlaylists());
                     Console.ReadKey();
                 }
 

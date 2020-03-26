@@ -30,19 +30,21 @@ namespace Laoratorio2
 
         public string Informacionplaylist() //Creo el método Informacionplaylist() que me permite ver su información
         {
+            string resultado = "";
             if (canciones.Count() == 0)
             {
-                Console.WriteLine("Playlist vacía");
+                return "Playlist vacía";
             }
             else
             {
-                Console.WriteLine("Nombre Playlist: " + nombre);
+                resultado+="Nombre Playlist: " + nombre  + "\n";
                 foreach (Cancion i in canciones)
                 {
-                    Console.WriteLine(i.Informacion());
+                    resultado +=i.Informacion();
+                    resultado += "\n";
                 }
             }
-            return "";
+            return resultado;
         }
     }
 }

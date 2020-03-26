@@ -126,15 +126,17 @@ namespace Laoratorio2
         //Para ver la información de cada Playlist y de cada canción contenida en las Playlist
         public string VerMisPlaylists()
         {
+            string resultado = "";
             if (playlists.Count == 0)
             {
-                Console.WriteLine ("No existen Playlist");
+                return "No existen Playlist";
             }
             foreach (Playlist i in playlists)
             {
-                Console.WriteLine(i.Informacionplaylist());
+                resultado += i.Informacionplaylist();
+                resultado += "\n";
             }
-            return "";
+            return resultado;
         }
 
     }
