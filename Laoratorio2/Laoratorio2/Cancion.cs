@@ -13,7 +13,7 @@ namespace Laoratorio2
         private string artista; //Atributo artista
         private string género; //Atributo género
 
-        public Cancion(string nombre, string álbum, string artista, string género) //Creo el constructr de Cancion
+        public Cancion(string nombre, string álbum, string artista, string género) //Creo el constructor de Cancion
         {
             this.Nombre = nombre;
             this.Álbum = álbum;
@@ -44,7 +44,7 @@ namespace Laoratorio2
 
         public string Informacion() //Creo el método Informacion()
         {
-            return "género: " + Género + ", artista: " + Artista + ", álbum: " + Álbum + ", nombre: " + Nombre; 
+            return "género: " + género + ", artista: " + artista + ", álbum: " + álbum + ", nombre: " + nombre; 
         }
 
     }

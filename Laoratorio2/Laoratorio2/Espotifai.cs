@@ -133,8 +133,7 @@ namespace Laoratorio2
             }
             foreach (Playlist i in playlists)
             {
-                resultado += i.Informacionplaylist();
-                resultado += "\n";
+                resultado += i.Informacionplaylist()+ "\n";
             }
             return resultado;
         }

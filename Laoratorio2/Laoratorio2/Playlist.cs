@@ -40,8 +40,7 @@ namespace Laoratorio2
                 resultado+="Nombre Playlist: " + nombre  + "\n";
                 foreach (Cancion i in canciones)
                 {
-                    resultado +=i.Informacion();
-                    resultado += "\n";
+                    resultado +=i.Informacion()+"\n";
                 }
             }
             return resultado;
